@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    // Exclude packages that shouldn't be pre-bundled
-    exclude: [],
+    // Exclude packages that can be problematic for the dep optimizer
+    exclude: ['@splinetool/react-spline', 'three'],
     // Entries point for dependency pre-bundling
     entries: ['./src/**/*.{js,jsx,ts,tsx}'],
     // Hold the first optimizeDeps run until all dependencies are discovered
