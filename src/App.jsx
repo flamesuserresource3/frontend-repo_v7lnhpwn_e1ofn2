@@ -1,14 +1,15 @@
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Showcase from './components/Showcase';
 import Stores from './components/Stores';
 import Footer from './components/Footer';
 
-function App() {
+export default function App() {
   return (
-    <div className="font-inter text-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-900">
       <Navbar />
-      <main>
+      <main className="flex flex-col gap-24">
         <Hero />
         <Showcase />
         <Stores />
@@ -17,5 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

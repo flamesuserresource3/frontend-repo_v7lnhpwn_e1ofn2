@@ -11,6 +11,12 @@ export default defineConfig({
     // Hold the first optimizeDeps run until all dependencies are discovered
     holdUntilCrawlEnd: true
   },
+  resolve: {
+    alias: {
+      // Route lodash.debounce to a stable ESM shim to avoid default export interop issues
+      'lodash.debounce': '/src/shims/lodash.debounce.js'
+    }
+  },
   server: {
     port: 3000,
     host: '0.0.0.0',
